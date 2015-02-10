@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,71 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gold_bg" translatesAutoresizingMaskIntoConstraints="NO" id="fn5-cT-KaG">
+                                <rect key="frame" x="0.0" y="0.0" width="621" height="611"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNK-4C-uqx">
+                                <rect key="frame" x="212" y="103" width="181" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="wuF-yH-CDK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ied-Y0-XAI">
+                                <rect key="frame" x="207" y="291" width="186" height="30"/>
+                                <state key="normal" title="Calculate Tax">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qaB-K6-Th8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="239" translatesAutoresizingMaskIntoConstraints="NO" id="lQ5-Pz-igI">
+                                <rect key="frame" x="210" y="234.5" width="181" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="VwK-yI-2uf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UHP-VN-eSj">
+                                <rect key="frame" x="146" y="175" width="328" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="lbx-cp-saf"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ied-Y0-XAI" firstAttribute="top" secondItem="lQ5-Pz-igI" secondAttribute="bottom" constant="30" id="2eK-XJ-m1V"/>
+                            <constraint firstItem="UHP-VN-eSj" firstAttribute="top" secondItem="VNK-4C-uqx" secondAttribute="bottom" constant="30" id="Lw5-ra-TaX"/>
+                            <constraint firstAttribute="centerX" secondItem="ied-Y0-XAI" secondAttribute="centerX" id="Sta-hI-8TR"/>
+                            <constraint firstAttribute="centerY" secondItem="ied-Y0-XAI" secondAttribute="centerY" id="Ttc-cx-D1g"/>
+                            <constraint firstItem="lQ5-Pz-igI" firstAttribute="top" secondItem="UHP-VN-eSj" secondAttribute="bottom" constant="30" id="cSK-LQ-1di"/>
+                            <constraint firstAttribute="centerX" secondItem="VNK-4C-uqx" secondAttribute="centerX" id="dgS-LF-b7C"/>
+                            <constraint firstAttribute="centerX" secondItem="UHP-VN-eSj" secondAttribute="centerX" id="sWU-H6-rvb"/>
+                            <constraint firstAttribute="centerX" secondItem="lQ5-Pz-igI" secondAttribute="centerX" id="zw3-Rl-O10"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="VNK-4C-uqx" id="rvT-YU-1Ym"/>
+                        <outlet property="resultLabel" destination="lQ5-Pz-igI" id="dsc-9v-cCM"/>
+                        <outlet property="segmentedControl" destination="UHP-VN-eSj" id="opo-R4-N2w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="gold_bg" width="160" height="284"/>
+    </resources>
 </document>

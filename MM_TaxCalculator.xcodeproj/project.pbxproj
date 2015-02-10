@@ -14,6 +14,7 @@
 		6BCB8B661A884D4D00C1436D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB8B651A884D4D00C1436D /* Images.xcassets */; };
 		6BCB8B691A884D4D00C1436D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB8B671A884D4D00C1436D /* LaunchScreen.xib */; };
 		6BCB8B751A884D4D00C1436D /* MM_TaxCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB8B741A884D4D00C1436D /* MM_TaxCalculatorTests.m */; };
+		6BCB8B7F1A88551100C1436D /* MM Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB8B7E1A88551100C1436D /* MM Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6BCB8B6E1A884D4D00C1436D /* MM_TaxCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MM_TaxCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCB8B731A884D4D00C1436D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCB8B741A884D4D00C1436D /* MM_TaxCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MM_TaxCalculatorTests.m; sourceTree = "<group>"; };
+		6BCB8B7E1A88551100C1436D /* MM Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MM Logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		6BCB8B581A884D4D00C1436D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6BCB8B7E1A88551100C1436D /* MM Logo.png */,
 				6BCB8B591A884D4D00C1436D /* Info.plist */,
 				6BCB8B5A1A884D4D00C1436D /* main.m */,
 			);
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCB8B641A884D4D00C1436D /* Main.storyboard in Resources */,
+				6BCB8B7F1A88551100C1436D /* MM Logo.png in Resources */,
 				6BCB8B691A884D4D00C1436D /* LaunchScreen.xib in Resources */,
 				6BCB8B661A884D4D00C1436D /* Images.xcassets in Resources */,
 			);
